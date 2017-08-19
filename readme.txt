@@ -1,3 +1,4 @@
+
 Variant calling pipeline:
   1) gatk_pipeline.txt
      Commands for the gatk variant calling pipeline
@@ -49,3 +50,11 @@ Population structure analysis (integrating thousands of VCFs with 1000 Genomes d
       Run Admixture under different parameters
   14) combine.pl
       Merge sample IDs with ancestral proportions
+   
+  Useful genomic tools:
+  1) retrieve_seq_no_filter.pl
+     Retrieve DNA sequences according to an input bed file (chr start end) from UCSC chromosomal fasta files 
+  2) rank_chr_pos.c
+     Sort the chromosome positions in a bed file
+  3) scan_sel_new.c
+     Generate control sequences by matching the CG and repeat contents of an input file
