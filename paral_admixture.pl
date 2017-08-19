@@ -1,0 +1,12 @@
+$i=32;
+open(output,">$i.sub");
+print output "#!/bin/sh\n";
+print output "#PBS -A proc_$i\n";
+print output "#PBS -j oe\n";
+print output "#PBS -l select=1:ncpus=32:mem=16gb\n";
+#print output "#PBS -l walltime=59:59:00\n";
+print output "work_dir=/bigdata0/users/wangyu/admix8/admixture2\n";
+print output "cd \$work_dir\n";
+print output "/home/wangyu/software/admixture_linux-1.23/admixture -j32 all.chr.bed 5";
+print output "\n";
+#system("qsub -q project $i.sub");

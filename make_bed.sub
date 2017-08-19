@@ -1,0 +1,8 @@
+#!/bin/sh
+#PBS -A proc_0
+#PBS -j oe
+#PBS -l select=1:ncpus=1:mem=64gb
+work_dir=/bigdata0/users/wangyu/admix8
+cd $work_dir
+plink --file all.chr --out admixture/all.chr --make-bed
+
